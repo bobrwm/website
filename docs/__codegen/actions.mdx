@@ -1,0 +1,103 @@
+---
+title: Keybind action reference
+description: Reference of all actions a bobrwm keybind can run.
+editOnGithubLink: https://github.com/bobrwm/bobrwm/edit/main/src/config.zig
+---
+
+These are the values of `.action` in a `.keybinds` entry. Actions
+that take a value read it from the entry's `.arg`.
+
+## `focus_workspace`
+
+Switch to the workspace numbered `arg`.
+
+## `move_to_workspace`
+
+Move the focused window to the workspace numbered `arg`.
+
+## `focus_left`
+
+Focus the window to the left.
+
+## `focus_right`
+
+Focus the window to the right.
+
+## `focus_up`
+
+Focus the window above.
+
+## `focus_down`
+
+Focus the window below.
+
+## `toggle_split`
+
+Cycle the BSP split mode used for the next split: auto, horizontal,
+vertical.
+
+## `toggle_fullscreen`
+
+Toggle the focused window fullscreen.
+
+## `toggle_float`
+
+Toggle the focused window between tiled and floating.
+
+## `move_workspace_to_display`
+
+Move the active workspace to display `arg` (1 through 8). `arg = 0`
+moves it to the next display and `arg = 255` to the previous one.
+
+## `focus_previous_workspace`
+
+Switch to the previous workspace. At the first workspace, the key
+passes through so native Spaces can handle it.
+
+## `focus_next_workspace`
+
+Switch to the next workspace. At the last workspace, the key passes
+through so native Spaces can handle it.
+
+## `toggle_dimming`
+
+Toggle inactive-window dimming, regardless of `dimmed_inactive.enabled`.
+
+## `swap_left`
+
+Swap the focused tiled window with its neighbor to the left.
+
+## `swap_right`
+
+Swap the focused tiled window with its neighbor to the right.
+
+## `swap_up`
+
+Swap the focused tiled window with its neighbor above.
+
+## `swap_down`
+
+Swap the focused tiled window with its neighbor below.
+
+## `center_float`
+
+Center the focused floating window on its display. No effect on tiled
+or fullscreen windows.
+
+## `reload_config`
+
+Reload the config file, keeping the current config if the new one is
+invalid.
+
+## `resize_grow`
+
+Grow the focused tiled window by moving its nearest BSP split 5
+percentage points, within the 10–90% split limits. No effect on
+floating or fullscreen windows, monocle layouts, or a workspace with
+one tiled window.
+
+## `resize_shrink`
+
+Shrink the focused tiled window by moving its nearest BSP split 5
+percentage points. Same limits as `resize_grow`.
+

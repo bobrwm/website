@@ -1,0 +1,66 @@
+---
+title: CLI reference
+description: Reference of all bobrwm client commands.
+editOnGithubLink: https://github.com/bobrwm/bobrwm/edit/main/src/command.zig
+---
+
+The `bobrwm` client includes these commands. Run
+`bobrwm <command> --help` for the same text in your terminal.
+
+## `help`
+
+```
+Usage: bobrwm help
+
+Show general help, including the commands forwarded to the running
+window manager. Same as `bobrwm --help`.
+
+Run `bobrwm <command> --help` for help on a specific command.
+```
+
+## `version`
+
+```
+Usage: bobrwm version
+
+Print the bobrwm version. Same as `bobrwm --version`.
+```
+
+## `show-config`
+
+```
+Usage: bobrwm show-config [--default] [--docs]
+
+Print the configuration in `config.zon` format.
+
+Without flags this prints the configuration bobrwm loads from your
+config file, with every option spelled out, including ones left at
+their default. If your config file is invalid, it prints the errors
+and exits non-zero instead.
+
+New to bobrwm? Start a config from every option with its
+documentation:
+
+    bobrwm show-config --default --docs > ~/.config/bobrwm/config.zon
+
+Flags:
+
+  --default  Print the built-in defaults instead of loading your
+             config file.
+
+  --docs     Print each option's documentation above it as a comment.
+```
+
+## `list-actions`
+
+```
+Usage: bobrwm list-actions [--docs]
+
+List the actions a keybind can run, the values of `.action` in a
+`.keybinds` entry.
+
+Flags:
+
+  --docs  Print each action's documentation below it.
+```
+

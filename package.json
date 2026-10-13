@@ -1,0 +1,7 @@
+{
+	"name": "website",
+	"private": true,
+	"scripts": {
+		"codegen": "test -d \"$BOBRWM_BUILD_DIR\" || { echo 'set BOBRWM_BUILD_DIR to the bobrwm install prefix (zig-out) after running `zig build docs` in bobrwm' >&2; exit 1; } && mkdir -p docs/__codegen && cp \"$BOBRWM_BUILD_DIR\"/share/bobrwm/webdata/*.mdx docs/__codegen/"
+	}
+}
